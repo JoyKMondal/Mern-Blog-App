@@ -75,7 +75,7 @@ const SettingsPage = () => {
   return (
     <div className="dashboard-sidebar flex justify-center max-md:flex-col gap-10 relative">
       <Toaster />
-      <div className="w-full md:w-1/3 lg:w-1/4 border h-cover md:sticky">
+      <div className="w-full md:w-1/3 lg:w-1/4 h-cover md:sticky">
         <div className="relative mb-8 bg-white border-b border-grey flex flex-nowrap overflow-x-auto transition-all duration-200 md:hidden max-md:sticky top-[80px]">
           {routes.map((route, index) => {
             return (
@@ -140,15 +140,6 @@ const SettingsPage = () => {
             </div>
             Notifications
           </NavLink>
-
-          <NavLink
-            className="dashboard-link"
-            to="/dashboard/write"
-            onClick={(e) => setPageState(e.target.innerText)}
-          >
-            <i className="fi fi-rr-file-edit"></i>
-            Write
-          </NavLink>
         </div>
 
         <div
@@ -187,7 +178,7 @@ const SettingsPage = () => {
         </div>
       </div>
 
-      <div className="w-full md:w-2/3 lg:w-3/4 mx-auto border hidden md:block px-10">
+      <div className="w-full md:w-2/3 lg:w-3/4 mx-auto hidden md:block px-10">
         <Outlet />
       </div>
     </div>
