@@ -90,7 +90,7 @@ const signup = async (req, res, next) => {
   });
 
   try {
-    await Users.collection.dropIndex("email_1");
+    // await Users.collection.dropIndex("email_1");
     await createdUser.save();
   } catch (err) {
     const error = new HttpError("Creating User failed, please try again.", 500);
@@ -695,3 +695,4 @@ exports.updateProfile = updateProfile;
 exports.newNotificationExists = newNotificationExists;
 exports.getNotifications = getNotifications;
 exports.countNotifications = countNotifications;
+
